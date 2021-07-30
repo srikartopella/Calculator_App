@@ -1,0 +1,279 @@
+/* Themes */
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-toggle-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  
+  --num-key-bg: hsl(30, 25%, 89%);
+  --num-key-shadow: hsl(28, 16%, 65%);
+  --special-key-bg: hsl(225, 21%, 49%);
+  --special-key-shadow: hsl(224, 28%, 35%);
+  --equal-key-bg: hsl(6, 63%, 50%);
+  --equal-key-shadow: hsl(6, 70%, 34%);
+
+  --color: #fff;
+  --btn-color: hsl(221, 14%, 31%);
+  --eq-color: #fff;
+  --s-color: #fff;
+}
+
+.light {
+  --main-bg: hsl(0, 0%, 90%);
+  --keypad-toggle-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+
+  --num-key-bg: hsl(45, 7%, 89%);
+  --num-key-shadow: hsl(35, 11%, 61%);
+  --special-key-bg: hsl(185, 42%, 37%);
+  --special-key-shadow: hsl(185, 58%, 25%);
+  --equal-key-bg: hsl(25, 98%, 40%);
+  --equal-key-shadow: hsl(25, 99%, 27%);
+
+  --color: hsl(60, 10%, 19%);
+  --btn-color: hsl(60, 10%, 19%);
+  --eq-color: #fff;
+  --s-color: #fff;
+}
+
+.contrast {
+  --main-bg: hsl(268, 75%, 9%);
+  --keypad-toggle-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  
+  --num-key-bg: hsl(268, 47%, 21%);
+  --num-key-shadow: hsl(290, 70%, 36%);
+  --special-key-bg: hsl(281, 89%, 26%);
+  --special-key-shadow: hsl(285, 91%, 52%);
+  --equal-key-bg: hsl(176, 100%, 44%);
+  --equal-key-shadow: hsl(177, 92%, 70%);
+  
+  --color:hsl(52, 100%, 62%);
+  --btn-color:hsl(52, 100%, 62%);
+  --eq-color: hsl(198, 20%, 13%);
+  --s-color:hsl(0, 0%, 100%);
+}
+/* Themes */
+
+/* General CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Spartan', sans-serif;
+  color: var(--color);
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}                  
+
+h1 {
+  font-size: 2rem;
+}
+/* General CSS */
+
+/* Utilities */
+
+.btn {
+  color: var(--btn-color);
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: "Spartan" , sans-serif;
+  padding: .8rem 0;
+  background-color: var(--num-key-bg);
+  border: 0;
+  border-radius: .3rem;
+  box-shadow: 0 4px 0 0 var(--num-key-shadow);
+  transition: all 50ms linear;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 0 var(--num-key-shadow)
+}
+
+.btn-reset , .btn-del {
+  color: var(--s-color);
+  background-color: var(--special-key-bg);
+  box-shadow: 0 4px 0 0 var(--special-key-shadow);
+}
+
+.btn-reset:active , .btn-del:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 0 var(--special-key-shadow);
+}
+
+.btn-equal {
+  color: var(--eq-color);
+  background-color: var(--equal-key-bg);
+  box-shadow: 0 4px 0 0 var(--equal-key-shadow);
+}
+
+.btn-equal:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 0 var(--equal-key-shadow);
+}
+
+/* Utilities */
+
+/* Main Content */
+.main {
+  max-width: 375px;
+  width: 87%;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.theme-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.theme-p {
+  margin: 0 1.3rem;
+  font-size: .625rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.theme-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-numbers {
+  margin: .2rem 0;
+  font-size: .675rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Theme toggle switch */
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  background-color: var(--keypad-toggle-bg);
+  padding: 5px;
+  border-radius: 100vw;
+}
+
+.radio__theme {
+  cursor: pointer;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__radio {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 .2rem;
+  box-sizing: border-box;
+}
+
+.radio__radio::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: var(--equal-key-bg);
+  border-radius: 50%;
+  transition: all 250ms linear;
+  transform: scale(0);
+}
+
+.radio__input:checked+.radio__radio:after {
+  transform: scale(1)
+}
+/* Theme toggle switch */
+/* Header */
+
+/* Screen */
+.screen {
+  margin: 1.5rem 0;
+  background-color: var(--screen-bg);
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: .8rem;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.display {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sign {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Screen */
+
+/* Keypad section */
+.keypad {
+  padding: 1.4375rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  background-color: var(--keypad-toggle-bg);
+  border-radius: .8rem;
+}
+
+.btn-reset,
+.btn-equal {
+  grid-column: span 2;
+}
+/* Keypad section */
+
+/* Media queries */
+@media screen and (min-width:992px)  {
+  .main {
+    max-width: 1440px;
+    width: 30%;
+  }
+
+  .keypad {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+}
+/* Media queries */
+
+/* Main Content */

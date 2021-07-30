@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Calculator App | Frontend Mentor</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- First Section -->
+      <section class="header">
+        <h1>calc</h1>
+        <section class="theme-wrapper">
+          <p class="theme-p">theme</pc>
+          <section class="theme-section">
+            <section class="theme-numbers">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </section>
+            <section class="theme">
+              <!-- Theme-1 -->
+              <label for="theme-1" class="radio__theme">
+                <input
+                  type="radio"
+                  class="radio__input radio__btn"
+                  name="theme"
+                  id="theme-1"
+                  value="default"
+                />
+                <div class="radio__radio"></div>
+              </label>
+
+              <!-- Theme-2 -->
+              <label for="theme-2" class="radio__theme">
+                <input
+                  type="radio"
+                  class="radio__input radio__btn"
+                  name="theme"
+                  id="theme-2"
+                  value="light"
+                />
+                <div class="radio__radio"></div>
+              </label>
+
+              <!-- Theme-3 -->
+              <label for="theme-3" class="radio__theme">
+                <input
+                  type="radio"
+                  class="radio__input radio__btn"
+                  name="theme"
+                  id="theme-3"
+                  value="contrast"
+                />
+                <div class="radio__radio"></div>
+              </label>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- Screen Section -->
+      <section class="screen">
+        <section class="sign" id="previous"></section>
+        <section class="display" id="display">0</section>
+      </section>
+
+      <!-- Keypad Section -->
+      <section class="keypad">
+        <button class="btn num-btn" value="7">7</button>
+        <button class="btn num-btn" value="8">8</button>
+        <button class="btn num-btn" value="9">9</button>
+        <button class="btn btn-del" id="btn-del">DEL</button>
+        <button class="btn num-btn" value="4">4</button>
+        <button class="btn num-btn" value="5">5</button>
+        <button class="btn num-btn" value="6">6</button>
+        <button class="btn" id="btn-plus" value="+">+</button>
+        <button class="btn num-btn" value="1">1</button>
+        <button class="btn num-btn" value="2">2</button>
+        <button class="btn num-btn" value="3">3</button>
+        <button class="btn" id="btn-minus" value="-">-</button>
+        <button class="btn num-btn" value=".">.</button>
+        <button class="btn num-btn" value="0">0</button>
+        <button class="btn" id="btn-divide" value="/">/</button>
+        <button class="btn" id="btn-cross" value="*">x</button>
+        <button class="btn btn-reset" id="btn-reset">Reset</button>
+        <button class="btn btn-equal" id="btn-equal">=</button>
+      </section>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./src/scripts/theme.js" ></script>
+  <script src="./src/scripts/index.js" type="module"></script>
+  </body>
+</html>
